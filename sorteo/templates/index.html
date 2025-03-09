@@ -16,6 +16,19 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            min-height: 100vh; /* Altura mínima igual a la ventana */
+        }
+
+        main {
+            flex: 1; /* Ocupa todo el espacio disponible */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
         }
 
         :root {
@@ -79,7 +92,39 @@
             margin-top: 20px;
             font-weight: bold;
         }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Diseño responsivo para móviles */
+        @media (max-width: 600px) {
+            footer {
+                font-size: 14px;
+                padding: 15px 10px;
+            }
+        }
     </style>
+
     <script>
         let nombres = new Set(); // Para evitar nombres repetidos
 
@@ -139,21 +184,32 @@
              python app.py
              Eso te ejecuta la app y te da una direccion que podras ejecutar
         -->
-    <h1>Sorteo</h1>
+    <main>
+        <h1>Sorteo</h1>
 
-    <button onclick="toggleTheme()">Cambiar a Modo Claro/Oscuro</button>
+        <button onclick="toggleTheme()">Cambiar a Modo Claro/Oscuro</button>
 
-    <form onsubmit="event.preventDefault(); realizarSorteo();">
-        <input type="text" id="participante" placeholder="Introduce un nombre">
-        <button type="button" onclick="agregarALaLista()">Agregar a la lista</button>
-        <button type="submit">Realizar Sorteo</button>
-    </form>
+        <form onsubmit="event.preventDefault(); realizarSorteo();">
+            <input type="text" id="participante" placeholder="Introduce un nombre">
+            <button type="button" onclick="agregarALaLista()">Agregar a la lista</button>
+            <button type="submit">Realizar Sorteo</button>
+        </form>
 
-    <div id="error" class="error"></div>
+        <div id="error" class="error"></div>
 
-    <h2>Lista de Participantes:</h2>
-    <ul id="lista_participantes"></ul>
+        <h2>Lista de Participantes:</h2>
+        <ul id="lista_participantes"></ul>
 
-    <div id="resultado" class="resultado"></div>
+        <div id="resultado" class="resultado"></div>
+
+    </main>
+    
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Antonio Aguilar. Todos los derechos reservados.</p>
+            <p><a href="https://github.com/antonio-aguilar/sorteo-phyton">Repositorio en GitHub</a></p>
+        </div>
+    </footer>
 </body>
 </html>
