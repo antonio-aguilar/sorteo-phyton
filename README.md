@@ -3,8 +3,7 @@ Web para hacer un sorteo, agrega los nombres de los participantes y espera a ver
 
 Modo Claro
 
-![image](https://github.com/user-attachments/assets/35bbde92-0df5-4730-af9d-d4484d0dfcee)
-
+![image](https://github.com/user-attachments/assets/59840455-1c0e-4f6a-9244-d39836e377e4)
 
 Modo Oscuro
 
